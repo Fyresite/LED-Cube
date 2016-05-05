@@ -1,0 +1,27 @@
+PODS:
+  - AWSCognito (2.4.1):
+    - AWSCore (= 2.4.1)
+  - AWSCognitoIdentityProvider (2.4.1):
+    - AWSCore (= 2.4.1)
+  - AWSCore (2.4.1)
+  - AWSS3 (2.4.1):
+    - AWSCore (= 2.4.1)
+  - iOS-Color-Picker (1.1.4)
+  - SSKeychain (1.4.0)
+
+DEPENDENCIES:
+  - AWSCognito
+  - AWSCognitoIdentityProvider
+  - AWSS3
+  - iOS-Color-Picker
+  - SSKeychain
+
+SPEC CHECKSUMS:
+  AWSCognito: a57173a82505161bd1a9c8cfe393cea9b5b1f6bb
+  AWSCognitoIdentityProvider: 94ba6554991dd65e214678361f1d691fe7adb528
+  AWSCore: 9bfd632f04aaf12053e639d2a9120372844beb0d
+  AWSS3: d7a3a694ffc4010e90b14755b5b9dbf70989c117
+  iOS-Color-Picker: 0eebf395527785e1ff2180c35b69f6d369051555
+  SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
+
+COCOAPODS: 0.39.0

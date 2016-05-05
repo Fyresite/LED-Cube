@@ -1,0 +1,683 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9D4660651CDBE3A80000879C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4660641CDBE3A80000879C /* main.m */; };
+		9D4660681CDBE3A80000879C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4660671CDBE3A80000879C /* AppDelegate.m */; };
+		9D4660731CDBE3A80000879C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4660721CDBE3A80000879C /* Assets.xcassets */; };
+		9D4660761CDBE3A80000879C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4660741CDBE3A80000879C /* LaunchScreen.storyboard */; };
+		9D4660811CDBE3A80000879C /* CubumQuandrangulumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4660801CDBE3A80000879C /* CubumQuandrangulumTests.m */; };
+		9D46608C1CDBE3A80000879C /* CubumQuandrangulumUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D46608B1CDBE3A80000879C /* CubumQuandrangulumUITests.m */; };
+		9D46609B1CDBE3EF0000879C /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D46609A1CDBE3EF0000879C /* MainMenu.m */; };
+		9D4660A91CDBE4730000879C /* CredentialStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D46609E1CDBE4730000879C /* CredentialStore.m */; };
+		9D4660AA1CDBE4730000879C /* CustomIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4660A01CDBE4730000879C /* CustomIndicator.m */; };
+		9D4660AB1CDBE4730000879C /* CustomScripts.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4660A21CDBE4730000879C /* CustomScripts.m */; };
+		9D4660AC1CDBE4730000879C /* CustomViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4660A41CDBE4730000879C /* CustomViews.m */; };
+		9D4660AE1CDBE4730000879C /* JsonReturn.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4660A81CDBE4730000879C /* JsonReturn.m */; };
+		9D711F3B1CDBED4A0090E2B2 /* IndividualController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D711F3A1CDBED4A0090E2B2 /* IndividualController.m */; };
+		9D711F3F1CDBEFD50090E2B2 /* GridLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D711F3E1CDBEFD50090E2B2 /* GridLayout.m */; };
+		9D711F451CDBF07E0090E2B2 /* LightBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D711F441CDBF07E0090E2B2 /* LightBox.m */; };
+		9D711F481CDBFE240090E2B2 /* BlockDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D711F471CDBFE240090E2B2 /* BlockDetailView.m */; };
+		E6CD790EA40E67F9899B65BD /* libPods-CubumQuandrangulum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F98505F45F3A5AEF53E2102 /* libPods-CubumQuandrangulum.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9D46607D1CDBE3A80000879C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D4660581CDBE3A80000879C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D46605F1CDBE3A80000879C;
+			remoteInfo = CubumQuandrangulum;
+		};
+		9D4660881CDBE3A80000879C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D4660581CDBE3A80000879C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D46605F1CDBE3A80000879C;
+			remoteInfo = CubumQuandrangulum;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3F98505F45F3A5AEF53E2102 /* libPods-CubumQuandrangulum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CubumQuandrangulum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D4660601CDBE3A80000879C /* CubumQuandrangulum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubumQuandrangulum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D4660641CDBE3A80000879C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9D4660661CDBE3A80000879C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9D4660671CDBE3A80000879C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9D4660721CDBE3A80000879C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D4660751CDBE3A80000879C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9D4660771CDBE3A80000879C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D46607C1CDBE3A80000879C /* CubumQuandrangulumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CubumQuandrangulumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D4660801CDBE3A80000879C /* CubumQuandrangulumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CubumQuandrangulumTests.m; sourceTree = "<group>"; };
+		9D4660821CDBE3A80000879C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D4660871CDBE3A80000879C /* CubumQuandrangulumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CubumQuandrangulumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D46608B1CDBE3A80000879C /* CubumQuandrangulumUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CubumQuandrangulumUITests.m; sourceTree = "<group>"; };
+		9D46608D1CDBE3A80000879C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D4660991CDBE3EF0000879C /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
+		9D46609A1CDBE3EF0000879C /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
+		9D46609D1CDBE4730000879C /* CredentialStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CredentialStore.h; sourceTree = "<group>"; };
+		9D46609E1CDBE4730000879C /* CredentialStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CredentialStore.m; sourceTree = "<group>"; };
+		9D46609F1CDBE4730000879C /* CustomIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIndicator.h; sourceTree = "<group>"; };
+		9D4660A01CDBE4730000879C /* CustomIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIndicator.m; sourceTree = "<group>"; };
+		9D4660A11CDBE4730000879C /* CustomScripts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomScripts.h; sourceTree = "<group>"; };
+		9D4660A21CDBE4730000879C /* CustomScripts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomScripts.m; sourceTree = "<group>"; };
+		9D4660A31CDBE4730000879C /* CustomViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViews.h; sourceTree = "<group>"; };
+		9D4660A41CDBE4730000879C /* CustomViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViews.m; sourceTree = "<group>"; };
+		9D4660A71CDBE4730000879C /* JsonReturn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonReturn.h; sourceTree = "<group>"; };
+		9D4660A81CDBE4730000879C /* JsonReturn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonReturn.m; sourceTree = "<group>"; };
+		9D711F391CDBED4A0090E2B2 /* IndividualController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndividualController.h; sourceTree = "<group>"; };
+		9D711F3A1CDBED4A0090E2B2 /* IndividualController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndividualController.m; sourceTree = "<group>"; };
+		9D711F3D1CDBEFD50090E2B2 /* GridLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridLayout.h; sourceTree = "<group>"; };
+		9D711F3E1CDBEFD50090E2B2 /* GridLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridLayout.m; sourceTree = "<group>"; };
+		9D711F431CDBF07E0090E2B2 /* LightBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightBox.h; sourceTree = "<group>"; };
+		9D711F441CDBF07E0090E2B2 /* LightBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightBox.m; sourceTree = "<group>"; };
+		9D711F461CDBFE240090E2B2 /* BlockDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockDetailView.h; sourceTree = "<group>"; };
+		9D711F471CDBFE240090E2B2 /* BlockDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockDetailView.m; sourceTree = "<group>"; };
+		B6949681AB58130700EC58DB /* Pods-CubumQuandrangulum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CubumQuandrangulum.release.xcconfig"; path = "Pods/Target Support Files/Pods-CubumQuandrangulum/Pods-CubumQuandrangulum.release.xcconfig"; sourceTree = "<group>"; };
+		BEB07FAD46EA123A8921D566 /* Pods-CubumQuandrangulum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CubumQuandrangulum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CubumQuandrangulum/Pods-CubumQuandrangulum.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9D46605D1CDBE3A80000879C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6CD790EA40E67F9899B65BD /* libPods-CubumQuandrangulum.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D4660791CDBE3A80000879C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D4660841CDBE3A80000879C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42287B0B6A3E69F6E06CB4E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BEB07FAD46EA123A8921D566 /* Pods-CubumQuandrangulum.debug.xcconfig */,
+				B6949681AB58130700EC58DB /* Pods-CubumQuandrangulum.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9D4660571CDBE3A80000879C = {
+			isa = PBXGroup;
+			children = (
+				9D4660621CDBE3A80000879C /* CubumQuandrangulum */,
+				9D46607F1CDBE3A80000879C /* CubumQuandrangulumTests */,
+				9D46608A1CDBE3A80000879C /* CubumQuandrangulumUITests */,
+				9D4660611CDBE3A80000879C /* Products */,
+				42287B0B6A3E69F6E06CB4E5 /* Pods */,
+				A343DA97D982C48D0ED00076 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9D4660611CDBE3A80000879C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D4660601CDBE3A80000879C /* CubumQuandrangulum.app */,
+				9D46607C1CDBE3A80000879C /* CubumQuandrangulumTests.xctest */,
+				9D4660871CDBE3A80000879C /* CubumQuandrangulumUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D4660621CDBE3A80000879C /* CubumQuandrangulum */ = {
+			isa = PBXGroup;
+			children = (
+				9D711F401CDBF0320090E2B2 /* Models */,
+				9D711F3C1CDBEFB90090E2B2 /* CustomCollectionLayout */,
+				9D46609C1CDBE46A0000879C /* DDFiles */,
+				9D711F411CDBF0370090E2B2 /* MainFiles */,
+				9D4660631CDBE3A80000879C /* Supporting Files */,
+			);
+			path = CubumQuandrangulum;
+			sourceTree = "<group>";
+		};
+		9D4660631CDBE3A80000879C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D4660721CDBE3A80000879C /* Assets.xcassets */,
+				9D4660741CDBE3A80000879C /* LaunchScreen.storyboard */,
+				9D4660771CDBE3A80000879C /* Info.plist */,
+				9D4660641CDBE3A80000879C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9D46607F1CDBE3A80000879C /* CubumQuandrangulumTests */ = {
+			isa = PBXGroup;
+			children = (
+				9D4660801CDBE3A80000879C /* CubumQuandrangulumTests.m */,
+				9D4660821CDBE3A80000879C /* Info.plist */,
+			);
+			path = CubumQuandrangulumTests;
+			sourceTree = "<group>";
+		};
+		9D46608A1CDBE3A80000879C /* CubumQuandrangulumUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9D46608B1CDBE3A80000879C /* CubumQuandrangulumUITests.m */,
+				9D46608D1CDBE3A80000879C /* Info.plist */,
+			);
+			path = CubumQuandrangulumUITests;
+			sourceTree = "<group>";
+		};
+		9D46609C1CDBE46A0000879C /* DDFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9D46609D1CDBE4730000879C /* CredentialStore.h */,
+				9D46609E1CDBE4730000879C /* CredentialStore.m */,
+				9D46609F1CDBE4730000879C /* CustomIndicator.h */,
+				9D4660A01CDBE4730000879C /* CustomIndicator.m */,
+				9D4660A11CDBE4730000879C /* CustomScripts.h */,
+				9D4660A21CDBE4730000879C /* CustomScripts.m */,
+				9D4660A31CDBE4730000879C /* CustomViews.h */,
+				9D4660A41CDBE4730000879C /* CustomViews.m */,
+				9D4660A71CDBE4730000879C /* JsonReturn.h */,
+				9D4660A81CDBE4730000879C /* JsonReturn.m */,
+			);
+			name = DDFiles;
+			sourceTree = "<group>";
+		};
+		9D711F3C1CDBEFB90090E2B2 /* CustomCollectionLayout */ = {
+			isa = PBXGroup;
+			children = (
+				9D711F3D1CDBEFD50090E2B2 /* GridLayout.h */,
+				9D711F3E1CDBEFD50090E2B2 /* GridLayout.m */,
+			);
+			name = CustomCollectionLayout;
+			sourceTree = "<group>";
+		};
+		9D711F401CDBF0320090E2B2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9D711F431CDBF07E0090E2B2 /* LightBox.h */,
+				9D711F441CDBF07E0090E2B2 /* LightBox.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9D711F411CDBF0370090E2B2 /* MainFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9D711F421CDBF0540090E2B2 /* MainMenuChildren */,
+				9D4660991CDBE3EF0000879C /* MainMenu.h */,
+				9D46609A1CDBE3EF0000879C /* MainMenu.m */,
+				9D4660661CDBE3A80000879C /* AppDelegate.h */,
+				9D4660671CDBE3A80000879C /* AppDelegate.m */,
+			);
+			name = MainFiles;
+			sourceTree = "<group>";
+		};
+		9D711F421CDBF0540090E2B2 /* MainMenuChildren */ = {
+			isa = PBXGroup;
+			children = (
+				9D711F391CDBED4A0090E2B2 /* IndividualController.h */,
+				9D711F3A1CDBED4A0090E2B2 /* IndividualController.m */,
+				9D711F461CDBFE240090E2B2 /* BlockDetailView.h */,
+				9D711F471CDBFE240090E2B2 /* BlockDetailView.m */,
+			);
+			name = MainMenuChildren;
+			sourceTree = "<group>";
+		};
+		A343DA97D982C48D0ED00076 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F98505F45F3A5AEF53E2102 /* libPods-CubumQuandrangulum.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9D46605F1CDBE3A80000879C /* CubumQuandrangulum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D4660901CDBE3A80000879C /* Build configuration list for PBXNativeTarget "CubumQuandrangulum" */;
+			buildPhases = (
+				3EBCA0391CA8E3E114BCFF2E /* Check Pods Manifest.lock */,
+				9D46605C1CDBE3A80000879C /* Sources */,
+				9D46605D1CDBE3A80000879C /* Frameworks */,
+				9D46605E1CDBE3A80000879C /* Resources */,
+				11BDAC5A4F37ED194CCF9F2D /* Embed Pods Frameworks */,
+				F06A0A6FFE8EA34CADC4C97C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CubumQuandrangulum;
+			productName = CubumQuandrangulum;
+			productReference = 9D4660601CDBE3A80000879C /* CubumQuandrangulum.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9D46607B1CDBE3A80000879C /* CubumQuandrangulumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D4660931CDBE3A80000879C /* Build configuration list for PBXNativeTarget "CubumQuandrangulumTests" */;
+			buildPhases = (
+				9D4660781CDBE3A80000879C /* Sources */,
+				9D4660791CDBE3A80000879C /* Frameworks */,
+				9D46607A1CDBE3A80000879C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D46607E1CDBE3A80000879C /* PBXTargetDependency */,
+			);
+			name = CubumQuandrangulumTests;
+			productName = CubumQuandrangulumTests;
+			productReference = 9D46607C1CDBE3A80000879C /* CubumQuandrangulumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9D4660861CDBE3A80000879C /* CubumQuandrangulumUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D4660961CDBE3A80000879C /* Build configuration list for PBXNativeTarget "CubumQuandrangulumUITests" */;
+			buildPhases = (
+				9D4660831CDBE3A80000879C /* Sources */,
+				9D4660841CDBE3A80000879C /* Frameworks */,
+				9D4660851CDBE3A80000879C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D4660891CDBE3A80000879C /* PBXTargetDependency */,
+			);
+			name = CubumQuandrangulumUITests;
+			productName = CubumQuandrangulumUITests;
+			productReference = 9D4660871CDBE3A80000879C /* CubumQuandrangulumUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D4660581CDBE3A80000879C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Fyresite;
+				TargetAttributes = {
+					9D46605F1CDBE3A80000879C = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					9D46607B1CDBE3A80000879C = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 9D46605F1CDBE3A80000879C;
+					};
+					9D4660861CDBE3A80000879C = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 9D46605F1CDBE3A80000879C;
+					};
+				};
+			};
+			buildConfigurationList = 9D46605B1CDBE3A80000879C /* Build configuration list for PBXProject "CubumQuandrangulum" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9D4660571CDBE3A80000879C;
+			productRefGroup = 9D4660611CDBE3A80000879C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D46605F1CDBE3A80000879C /* CubumQuandrangulum */,
+				9D46607B1CDBE3A80000879C /* CubumQuandrangulumTests */,
+				9D4660861CDBE3A80000879C /* CubumQuandrangulumUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9D46605E1CDBE3A80000879C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D4660761CDBE3A80000879C /* LaunchScreen.storyboard in Resources */,
+				9D4660731CDBE3A80000879C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D46607A1CDBE3A80000879C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D4660851CDBE3A80000879C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11BDAC5A4F37ED194CCF9F2D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CubumQuandrangulum/Pods-CubumQuandrangulum-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3EBCA0391CA8E3E114BCFF2E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F06A0A6FFE8EA34CADC4C97C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CubumQuandrangulum/Pods-CubumQuandrangulum-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9D46605C1CDBE3A80000879C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D4660A91CDBE4730000879C /* CredentialStore.m in Sources */,
+				9D711F481CDBFE240090E2B2 /* BlockDetailView.m in Sources */,
+				9D4660AB1CDBE4730000879C /* CustomScripts.m in Sources */,
+				9D4660681CDBE3A80000879C /* AppDelegate.m in Sources */,
+				9D711F3F1CDBEFD50090E2B2 /* GridLayout.m in Sources */,
+				9D4660651CDBE3A80000879C /* main.m in Sources */,
+				9D4660AA1CDBE4730000879C /* CustomIndicator.m in Sources */,
+				9D4660AC1CDBE4730000879C /* CustomViews.m in Sources */,
+				9D46609B1CDBE3EF0000879C /* MainMenu.m in Sources */,
+				9D711F3B1CDBED4A0090E2B2 /* IndividualController.m in Sources */,
+				9D4660AE1CDBE4730000879C /* JsonReturn.m in Sources */,
+				9D711F451CDBF07E0090E2B2 /* LightBox.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D4660781CDBE3A80000879C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D4660811CDBE3A80000879C /* CubumQuandrangulumTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D4660831CDBE3A80000879C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D46608C1CDBE3A80000879C /* CubumQuandrangulumUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9D46607E1CDBE3A80000879C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D46605F1CDBE3A80000879C /* CubumQuandrangulum */;
+			targetProxy = 9D46607D1CDBE3A80000879C /* PBXContainerItemProxy */;
+		};
+		9D4660891CDBE3A80000879C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D46605F1CDBE3A80000879C /* CubumQuandrangulum */;
+			targetProxy = 9D4660881CDBE3A80000879C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9D4660741CDBE3A80000879C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D4660751CDBE3A80000879C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9D46608E1CDBE3A80000879C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		9D46608F1CDBE3A80000879C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9D4660911CDBE3A80000879C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEB07FAD46EA123A8921D566 /* Pods-CubumQuandrangulum.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CubumQuandrangulum/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cubum.fyresite.CubumQuandrangulum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9D4660921CDBE3A80000879C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6949681AB58130700EC58DB /* Pods-CubumQuandrangulum.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CubumQuandrangulum/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cubum.fyresite.CubumQuandrangulum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9D4660941CDBE3A80000879C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CubumQuandrangulumTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cubum.fyresite.CubumQuandrangulumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CubumQuandrangulum.app/CubumQuandrangulum";
+			};
+			name = Debug;
+		};
+		9D4660951CDBE3A80000879C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CubumQuandrangulumTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cubum.fyresite.CubumQuandrangulumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CubumQuandrangulum.app/CubumQuandrangulum";
+			};
+			name = Release;
+		};
+		9D4660971CDBE3A80000879C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CubumQuandrangulumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cubum.fyresite.CubumQuandrangulumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CubumQuandrangulum;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		9D4660981CDBE3A80000879C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CubumQuandrangulumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cubum.fyresite.CubumQuandrangulumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CubumQuandrangulum;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9D46605B1CDBE3A80000879C /* Build configuration list for PBXProject "CubumQuandrangulum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D46608E1CDBE3A80000879C /* Debug */,
+				9D46608F1CDBE3A80000879C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D4660901CDBE3A80000879C /* Build configuration list for PBXNativeTarget "CubumQuandrangulum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D4660911CDBE3A80000879C /* Debug */,
+				9D4660921CDBE3A80000879C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D4660931CDBE3A80000879C /* Build configuration list for PBXNativeTarget "CubumQuandrangulumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D4660941CDBE3A80000879C /* Debug */,
+				9D4660951CDBE3A80000879C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D4660961CDBE3A80000879C /* Build configuration list for PBXNativeTarget "CubumQuandrangulumUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D4660971CDBE3A80000879C /* Debug */,
+				9D4660981CDBE3A80000879C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D4660581CDBE3A80000879C /* Project object */;
+}

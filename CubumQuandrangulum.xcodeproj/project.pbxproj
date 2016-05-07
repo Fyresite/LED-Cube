@@ -23,6 +23,12 @@
 		9D711F3F1CDBEFD50090E2B2 /* GridLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D711F3E1CDBEFD50090E2B2 /* GridLayout.m */; };
 		9D711F451CDBF07E0090E2B2 /* LightBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D711F441CDBF07E0090E2B2 /* LightBox.m */; };
 		9D711F481CDBFE240090E2B2 /* BlockDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D711F471CDBFE240090E2B2 /* BlockDetailView.m */; };
+		9D711F4B1CDD113D0090E2B2 /* LightColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D711F4A1CDD113D0090E2B2 /* LightColumn.m */; };
+		9D711F4D1CDD3B600090E2B2 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D711F4C1CDD3B600090E2B2 /* CoreBluetooth.framework */; };
+		9D711F511CDD3DB30090E2B2 /* BTManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D711F501CDD3DB30090E2B2 /* BTManagerController.m */; };
+		9D711F541CDD52350090E2B2 /* QeueList.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D711F531CDD52350090E2B2 /* QeueList.m */; };
+		9D711F571CDD525E0090E2B2 /* QeueAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D711F561CDD525E0090E2B2 /* QeueAnimation.m */; };
+		9D711F5B1CDD61C20090E2B2 /* DropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D711F5A1CDD61C20090E2B2 /* DropdownMenu.m */; };
 		E6CD790EA40E67F9899B65BD /* libPods-CubumQuandrangulum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F98505F45F3A5AEF53E2102 /* libPods-CubumQuandrangulum.a */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +84,17 @@
 		9D711F441CDBF07E0090E2B2 /* LightBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightBox.m; sourceTree = "<group>"; };
 		9D711F461CDBFE240090E2B2 /* BlockDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockDetailView.h; sourceTree = "<group>"; };
 		9D711F471CDBFE240090E2B2 /* BlockDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockDetailView.m; sourceTree = "<group>"; };
+		9D711F491CDD113D0090E2B2 /* LightColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightColumn.h; sourceTree = "<group>"; };
+		9D711F4A1CDD113D0090E2B2 /* LightColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightColumn.m; sourceTree = "<group>"; };
+		9D711F4C1CDD3B600090E2B2 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		9D711F4F1CDD3DB30090E2B2 /* BTManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTManagerController.h; sourceTree = "<group>"; };
+		9D711F501CDD3DB30090E2B2 /* BTManagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTManagerController.m; sourceTree = "<group>"; };
+		9D711F521CDD52350090E2B2 /* QeueList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QeueList.h; sourceTree = "<group>"; };
+		9D711F531CDD52350090E2B2 /* QeueList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QeueList.m; sourceTree = "<group>"; };
+		9D711F551CDD525E0090E2B2 /* QeueAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QeueAnimation.h; sourceTree = "<group>"; };
+		9D711F561CDD525E0090E2B2 /* QeueAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QeueAnimation.m; sourceTree = "<group>"; };
+		9D711F591CDD61C20090E2B2 /* DropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropdownMenu.h; sourceTree = "<group>"; };
+		9D711F5A1CDD61C20090E2B2 /* DropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropdownMenu.m; sourceTree = "<group>"; };
 		B6949681AB58130700EC58DB /* Pods-CubumQuandrangulum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CubumQuandrangulum.release.xcconfig"; path = "Pods/Target Support Files/Pods-CubumQuandrangulum/Pods-CubumQuandrangulum.release.xcconfig"; sourceTree = "<group>"; };
 		BEB07FAD46EA123A8921D566 /* Pods-CubumQuandrangulum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CubumQuandrangulum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CubumQuandrangulum/Pods-CubumQuandrangulum.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D711F4D1CDD3B600090E2B2 /* CoreBluetooth.framework in Frameworks */,
 				E6CD790EA40E67F9899B65BD /* libPods-CubumQuandrangulum.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +160,7 @@
 		9D4660621CDBE3A80000879C /* CubumQuandrangulum */ = {
 			isa = PBXGroup;
 			children = (
+				9D711F581CDD61220090E2B2 /* DropdownAnimationMenu */,
 				9D711F401CDBF0320090E2B2 /* Models */,
 				9D711F3C1CDBEFB90090E2B2 /* CustomCollectionLayout */,
 				9D46609C1CDBE46A0000879C /* DDFiles */,
@@ -211,6 +230,10 @@
 			children = (
 				9D711F431CDBF07E0090E2B2 /* LightBox.h */,
 				9D711F441CDBF07E0090E2B2 /* LightBox.m */,
+				9D711F491CDD113D0090E2B2 /* LightColumn.h */,
+				9D711F4A1CDD113D0090E2B2 /* LightColumn.m */,
+				9D711F551CDD525E0090E2B2 /* QeueAnimation.h */,
+				9D711F561CDD525E0090E2B2 /* QeueAnimation.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -230,17 +253,39 @@
 		9D711F421CDBF0540090E2B2 /* MainMenuChildren */ = {
 			isa = PBXGroup;
 			children = (
+				9D711F4E1CDD3D930090E2B2 /* blueTooth */,
 				9D711F391CDBED4A0090E2B2 /* IndividualController.h */,
 				9D711F3A1CDBED4A0090E2B2 /* IndividualController.m */,
 				9D711F461CDBFE240090E2B2 /* BlockDetailView.h */,
 				9D711F471CDBFE240090E2B2 /* BlockDetailView.m */,
+				9D711F521CDD52350090E2B2 /* QeueList.h */,
+				9D711F531CDD52350090E2B2 /* QeueList.m */,
 			);
 			name = MainMenuChildren;
+			sourceTree = "<group>";
+		};
+		9D711F4E1CDD3D930090E2B2 /* blueTooth */ = {
+			isa = PBXGroup;
+			children = (
+				9D711F4F1CDD3DB30090E2B2 /* BTManagerController.h */,
+				9D711F501CDD3DB30090E2B2 /* BTManagerController.m */,
+			);
+			name = blueTooth;
+			sourceTree = "<group>";
+		};
+		9D711F581CDD61220090E2B2 /* DropdownAnimationMenu */ = {
+			isa = PBXGroup;
+			children = (
+				9D711F591CDD61C20090E2B2 /* DropdownMenu.h */,
+				9D711F5A1CDD61C20090E2B2 /* DropdownMenu.m */,
+			);
+			name = DropdownAnimationMenu;
 			sourceTree = "<group>";
 		};
 		A343DA97D982C48D0ED00076 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D711F4C1CDD3B600090E2B2 /* CoreBluetooth.framework */,
 				3F98505F45F3A5AEF53E2102 /* libPods-CubumQuandrangulum.a */,
 			);
 			name = Frameworks;
@@ -316,6 +361,7 @@
 				TargetAttributes = {
 					9D46605F1CDBE3A80000879C = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = Y3T5DGZQ77;
 					};
 					9D46607B1CDBE3A80000879C = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -427,9 +473,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D4660A91CDBE4730000879C /* CredentialStore.m in Sources */,
+				9D711F571CDD525E0090E2B2 /* QeueAnimation.m in Sources */,
+				9D711F4B1CDD113D0090E2B2 /* LightColumn.m in Sources */,
+				9D711F541CDD52350090E2B2 /* QeueList.m in Sources */,
 				9D711F481CDBFE240090E2B2 /* BlockDetailView.m in Sources */,
+				9D711F511CDD3DB30090E2B2 /* BTManagerController.m in Sources */,
 				9D4660AB1CDBE4730000879C /* CustomScripts.m in Sources */,
 				9D4660681CDBE3A80000879C /* AppDelegate.m in Sources */,
+				9D711F5B1CDD61C20090E2B2 /* DropdownMenu.m in Sources */,
 				9D711F3F1CDBEFD50090E2B2 /* GridLayout.m in Sources */,
 				9D4660651CDBE3A80000879C /* main.m in Sources */,
 				9D4660AA1CDBE4730000879C /* CustomIndicator.m in Sources */,
@@ -571,10 +622,13 @@
 			baseConfigurationReference = BEB07FAD46EA123A8921D566 /* Pods-CubumQuandrangulum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CubumQuandrangulum/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cubum.fyresite.CubumQuandrangulum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -583,10 +637,13 @@
 			baseConfigurationReference = B6949681AB58130700EC58DB /* Pods-CubumQuandrangulum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CubumQuandrangulum/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cubum.fyresite.CubumQuandrangulum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

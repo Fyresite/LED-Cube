@@ -7,17 +7,24 @@
 //
 
 #import "LightBox.h"
+#import "QeueAnimation.h"
 
 @implementation LightBox
 
 -(instancetype)initWithDictionary:(NSMutableDictionary*)dict{
     if(self){
-        self.number = [[dict objectForKey:@"number"] integerValue];
-        self.box_id = [dict objectForKey:@"box_id"];
-        self.name = [dict objectForKey:@"name"];
-        self.columnNumber = [[dict objectForKey:@"columnNumber"] integerValue];
-        self.position = [[dict objectForKey:@"position"] integerValue];
         
+        self.color = [UIColor colorWithRed:188.0f/255.0f green:166.0f/255.0f blue:144.0f/255.0f alpha:1.0];
+        self.brightness = 225.0f;
+        self.delay = 2.5;
+        self.repeat = 5;
+        
+        self.first_number = [[dict objectForKey:@"first_number"] intValue];
+        self.last_number = [[dict objectForKey:@"last_number"] intValue];
+        
+        self.range = NSMakeRange([[NSNumber numberWithInteger:self.first_number] integerValue],[[NSNumber numberWithInteger:self.last_number] integerValue]);
+        
+        _animations = [NSMutableArray new];
         
     }
     return self;

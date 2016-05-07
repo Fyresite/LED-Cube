@@ -13,5 +13,7 @@
 @property UIButton *individualBtn;
 @property UIButton *columnsBtn;
 @property UIButton *allBtn;
+@property UIButton *connectDevice;
+@property UILabel *deviceConnectedLabel;
 
 @end

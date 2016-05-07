@@ -33,18 +33,21 @@
 -(void)brightnessSliderChange:(UISlider*)sender{
     UISlider *slider = (UISlider*)sender;
     float value = slider.value;
-    NSLog(@"brightnes slider tag %ld changed to %f", (long)sender.tag, value);
+    
+    _brightnessValue.text = [NSString stringWithFormat:@"%i",[[NSNumber numberWithFloat:value] intValue]];
 }
 
 -(void)milliSliderChange:(UISlider*)sender{
     UISlider *slider = (UISlider*)sender;
     float value = slider.value;
-    NSLog(@"milli slider tag %ld changed to %f", (long)sender.tag, value);
+    
+    _delayValue.text = [NSString stringWithFormat:@"%i",[[NSNumber numberWithFloat:value] intValue]];
 }
 -(void)repeatSliderChange:(UISlider*)sender{
     UISlider *slider = (UISlider*)sender;
     float value = slider.value;
-    NSLog(@"repeat slider tag %ld changed to %f", (long)sender.tag, value);
+    
+    _repeatValue.text = [NSString stringWithFormat:@"%i",[[NSNumber numberWithFloat:value] intValue]];
 }
 -(void)dismissView:(UIButton*)sender{
     [self removeFromSuperview];
@@ -99,29 +102,31 @@
     _brightnessLabel =[CustomViews customLabelWithTitle:@"Set Brightness (0-5)"];
     _brightnessSlider = [CustomViews sliderBar];
     _brightnessSlider.tag = 1;
-    [_brightnessSlider addTarget:self action:@selector(brightnessSliderChange:) forControlEvents:UIControlEventTouchUpInside];
+    _brightnessSlider.maximumValue = 5;
+    [_brightnessSlider addTarget:self action:@selector(brightnessSliderChange:) forControlEvents:UIControlEventValueChanged];
     _brightnessValue = [CustomViews customLabelWithTitle:@"Value: "];
     
     _delayMilliLabel = [CustomViews customLabelWithTitle:@"Set Delay (0-10000)"];
     _delayMilliSlider = [CustomViews sliderBar];
     _delayMilliSlider.tag = 2;
-    [_delayMilliSlider addTarget:self action:@selector(milliSliderChange:) forControlEvents:UIControlEventTouchUpInside];
+    _delayMilliSlider.maximumValue = 10000;
+    [_delayMilliSlider addTarget:self action:@selector(milliSliderChange:) forControlEvents:UIControlEventValueChanged];
     _delayValue = [CustomViews customLabelWithTitle:@"Value: "];
     
     _repeatStepLabel = [CustomViews customLabelWithTitle:@"Repeat Step (1-15x)"];
     _repeatStepSlider = [CustomViews sliderBar];
     _repeatStepSlider.tag = 3;
-    [_repeatStepSlider addTarget:self action:@selector(repeatSliderChange:) forControlEvents:UIControlEventTouchUpInside];
+    _repeatStepSlider.maximumValue = 15;
+    [_repeatStepSlider addTarget:self action:@selector(repeatSliderChange:) forControlEvents:UIControlEventValueChanged];
     _repeatValue = [CustomViews customLabelWithTitle:@"Value: "];
     
-    
-    [_rightContent addSubview:_dismissButton];
-    
+    //Dismiss
+    [_leftContent addSubview:_dismissButton];
+    //Everything else.
     [self addSubview:_leftContent];
     [_leftContent addSubview:_cube_label];
     [_leftContent addSubview:_deto_label];
     [_leftContent addSubview:_dropdown_deto];
-//    [_leftContent addSubview:_addanotherStep];
     [_leftContent addSubview:_chosenColor];
     [_leftContent addSubview:_choseColorbtn];
     [_leftContent addSubview:_color_label];
@@ -178,7 +183,7 @@
     [_leftContent addConstraint:[NSLayoutConstraint constraintWithItem:_choseColorbtn attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:_leftContent attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
 
     //Another Step
-    [_leftContent addConstraint:[NSLayoutConstraint constraintWithItem:_addanotherStep attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:_leftContent attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-150.0]];
+    [_leftContent addConstraint:[NSLayoutConstraint constraintWithItem:_addanotherStep attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:_leftContent attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-120.0]];
     [_leftContent addConstraint:[NSLayoutConstraint constraintWithItem:_addanotherStep attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:_leftContent attribute:NSLayoutAttributeWidth multiplier:.9 constant:0.0]];
     [_leftContent addConstraint:[NSLayoutConstraint constraintWithItem:_addanotherStep attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_leftContent attribute:NSLayoutAttributeHeight multiplier:.05 constant:0.0]];
     [_leftContent addConstraint:[NSLayoutConstraint constraintWithItem:_addanotherStep attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:_leftContent attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
@@ -195,23 +200,23 @@
     //Brightness Value
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_brightnessValue attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeTop multiplier:1.0 constant:10.0]];
      [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_brightnessValue attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeWidth multiplier:.9 constant:0.0]];
-     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_brightnessValue attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeHeight multiplier:.05 constant:0.0]];
+     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_brightnessValue attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeHeight multiplier:.06 constant:0.0]];
      [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_brightnessValue attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
     //Brightness Slider
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_brightnessSlider attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_brightnessValue attribute:NSLayoutAttributeBottom multiplier:1.0 constant:20.0]];
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_brightnessSlider attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeWidth multiplier:.9 constant:0.0]];
-    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_brightnessSlider attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeHeight multiplier:.05 constant:0.0]];
+    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_brightnessSlider attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeHeight multiplier:.06 constant:0.0]];
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_brightnessSlider attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
     //Brightness label
-    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_brightnessLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_brightnessSlider attribute:NSLayoutAttributeBottom multiplier:1.0 constant:5.0]];
+    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_brightnessLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_brightnessSlider attribute:NSLayoutAttributeBottom multiplier:1.0 constant:15.0]];
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_brightnessLabel attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeWidth multiplier:.9 constant:0.0]];
-    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_brightnessLabel attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeHeight multiplier:.05 constant:0.0]];
+    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_brightnessLabel attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeHeight multiplier:.06 constant:0.0]];
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_brightnessLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
     
     //delayValue start
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_delayValue attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_brightnessLabel attribute:NSLayoutAttributeBottom multiplier:1.0 constant:50.0]];
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_delayValue attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeWidth multiplier:.9 constant:0.0]];
-    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_delayValue attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeHeight multiplier:.05 constant:0.0]];
+    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_delayValue attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeHeight multiplier:.06 constant:0.0]];
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_delayValue attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
     //dalay Slider
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_delayMilliSlider attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_delayValue attribute:NSLayoutAttributeBottom multiplier:1.0 constant:10.0]];
@@ -219,33 +224,33 @@
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_delayMilliSlider attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeHeight multiplier:.05 constant:0.0]];
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_delayMilliSlider attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
     //dlay label
-    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_delayMilliLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_delayMilliSlider attribute:NSLayoutAttributeBottom multiplier:1.0 constant:5.0]];
+    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_delayMilliLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_delayMilliSlider attribute:NSLayoutAttributeBottom multiplier:1.0 constant:15.0]];
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_delayMilliLabel attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeWidth multiplier:.9 constant:0.0]];
-    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_delayMilliLabel attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeHeight multiplier:.05 constant:0.0]];
+    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_delayMilliLabel attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeHeight multiplier:.06 constant:0.0]];
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_delayMilliLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
     
     
     //repeat value start
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_repeatValue attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_delayMilliLabel attribute:NSLayoutAttributeBottom multiplier:1.0 constant:50.0]];
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_repeatValue attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeWidth multiplier:.9 constant:0.0]];
-    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_repeatValue attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeHeight multiplier:.05 constant:0.0]];
+    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_repeatValue attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeHeight multiplier:.06 constant:0.0]];
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_repeatValue attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
     //repeat Slider
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_repeatStepSlider attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_repeatValue attribute:NSLayoutAttributeBottom multiplier:1.0 constant:10.0]];
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_repeatStepSlider attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeWidth multiplier:.9 constant:0.0]];
-    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_repeatStepSlider attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeHeight multiplier:.05 constant:0.0]];
+    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_repeatStepSlider attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeHeight multiplier:.06 constant:0.0]];
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_repeatStepSlider attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
     //repeat label
-    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_repeatStepLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_repeatStepSlider attribute:NSLayoutAttributeBottom multiplier:1.0 constant:5.0]];
+    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_repeatStepLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_repeatStepSlider attribute:NSLayoutAttributeBottom multiplier:1.0 constant:15.0]];
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_repeatStepLabel attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeWidth multiplier:.9 constant:0.0]];
-    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_repeatStepLabel attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeHeight multiplier:.05 constant:0.0]];
+    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_repeatStepLabel attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeHeight multiplier:.06 constant:0.0]];
     [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_repeatStepLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
     
-    //Another Step
-    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_dismissButton attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-50.0]];
-    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_dismissButton attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeWidth multiplier:1.0 constant:100.0]];
-    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_dismissButton attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1.0 constant:100.0]];
-    [_rightContent addConstraint:[NSLayoutConstraint constraintWithItem:_dismissButton attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:_rightContent attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
+    //dismiss btn Step
+    [_leftContent addConstraint:[NSLayoutConstraint constraintWithItem:_dismissButton attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:_leftContent attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-10.0]];
+    [_leftContent addConstraint:[NSLayoutConstraint constraintWithItem:_dismissButton attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeWidth multiplier:1.0 constant:100.0]];
+    [_leftContent addConstraint:[NSLayoutConstraint constraintWithItem:_dismissButton attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1.0 constant:100.0]];
+    [_leftContent addConstraint:[NSLayoutConstraint constraintWithItem:_dismissButton attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:_leftContent attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
     //
     
     

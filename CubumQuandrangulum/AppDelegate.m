@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "LightBox.h"
+#import "LightColumn.h"
 
 @interface AppDelegate ()
 
@@ -31,7 +33,51 @@
     [_mainNavigation popToRootViewControllerAnimated:YES];
     [self.window makeKeyAndVisible];
     
+    //instantiate objects.
+    [self createObjects];
+    
+    
     return YES;
+}
+
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
+    return UIInterfaceOrientationMaskLandscape;
+}
+
+-(void)createObjects{
+    self.cubes = [NSMutableArray new];
+    self.columns = [NSMutableArray new];
+    for (int x = 0; x < 45; x++) {
+        if(x % 5 == 0){
+            //Create lightColumn if x is divisble by 5
+            LightColumn *newColumn = [[LightColumn alloc] initWithDictionary:
+                                      (NSMutableDictionary*)@{@"light_column_id":[NSMutableString stringWithFormat:@"%i", (x/5)+1]}];
+            
+            
+            //Add to light columns
+            [self.columns addObject:newColumn];
+        }
+        //Each circuit has 0-8 bytes on it. 
+        NSNumber *first_number = [NSNumber numberWithInt:(x*8)];
+        NSNumber *last_number = [NSNumber numberWithInt:[first_number intValue]+8];
+        
+        LightColumn *current_column = [self.columns lastObject];
+        
+        LightBox *newLightBox = [[LightBox alloc] initWithDictionary:(NSMutableDictionary*)
+                                 @{@"first_number":first_number, @"last_number":last_number}];
+        
+        
+        newLightBox.name = @"Travis Was here";
+        newLightBox.number = x;
+        newLightBox.box_id = x;
+        newLightBox.position = (int)current_column.lightBoxes.count;
+        newLightBox.columnNumber = current_column.light_column_id;
+        newLightBox.column = current_column;
+        
+        [current_column.lightBoxes addObject:newLightBox];
+        [self.cubes addObject:newLightBox];
+        
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

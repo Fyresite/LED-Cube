@@ -11,6 +11,7 @@
 #import "LightBox.h"
 #import "GridLayout.h"
 #import "BlockDetailView.h"
+#import "QeueList.h"
 
 #define SLIDERSTARTVALUE 5
 #define SLIDERMAXVALUE 10
@@ -30,25 +31,21 @@
     if(self){
         self.layer.borderColor = [UIColor grayColor].CGColor;
         self.layer.borderWidth = 1.5;
+        
+        
+        
+        _number = [CustomViews customLabel];
+        
+        [self addSubview:_number];
+        
+        
+        //Everthing is related to the column btn
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:_number attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:_number attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0]];
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:_number attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0]];
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:_number attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0.0]];
     }
     return self;
-}
-
--(void)setupCellWithBox:(LightBox*)model{
-    self.lightBox = model;
-    
-    
-    _number = [CustomViews customLabel];
-    
-    [self addSubview:_number];
-    
-    
-    //Everthing is related to the column btn
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:_number attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:_number attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:_number attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:_number attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeHeight multiplier:1.0 constant:0.0]];
-    
 }
 
 @end
@@ -62,6 +59,8 @@
 @implementation IndividualController{
     AppDelegate *sharedDelegate;
     NSMutableArray *collection_data;
+    
+    LightBoxCell *current_clicked_cell;
 }
 
 
@@ -85,13 +84,13 @@
     return CGSizeMake(50, 50);
 }
 
+
 -(void)lightValueChange:(UISlider*)sender{
     UISlider *slider = (UISlider*)sender;
     float value = slider.value;
     
-    _sliderNumber.text = [NSString stringWithFormat:@"Value: %.2f", value];
+    _sliderNumber.text = [NSString stringWithFormat:@"%i",[[NSNumber numberWithFloat:value] intValue]];
     
-    NSLog(@"slider changed to %f", value);
 }
 -(void)justDoItClicked:(UIButton*)sender{
     
@@ -102,7 +101,7 @@
     layout.sectionInset = UIEdgeInsetsMake(10.0f, 10.0f, 10.0f, 10.0f);
     layout.minimumInteritemSpacing = 20.0f;
     layout.alignment = GridRowAlignmentCenter;
-    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     self.lightbox_collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
     self.lightbox_collection.delegate = self;
     self.lightbox_collection.dataSource = self;
@@ -117,7 +116,7 @@
     _setupAnimationBtn = [CustomViews buttonWithStringAndOuterBorder:@"Set Animation Group"];
     
     _slider = [CustomViews sliderBar];
-    [_slider addTarget:self action:@selector(lightValueChange:) forControlEvents:UIControlEventTouchUpInside];
+    [_slider addTarget:self action:@selector(lightValueChange:) forControlEvents:UIControlEventValueChanged];
     _slider.minimumValue = SLIDERMINVALUE;
     _slider.maximumValue = SLIDERMAXVALUE;
     _slider.continuous = YES;
@@ -145,13 +144,13 @@
     
     //do it button
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_doItbtn attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1.0 constant:-20.0]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_doItbtn attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-150.0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_doItbtn attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-80.0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_doItbtn attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:.3 constant:0.0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_doItbtn attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:.05 constant:0.0]];
     
     //Slider
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_slider attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1.0 constant:20.0]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_slider attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-150.0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_slider attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:-80.0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_slider attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:.3 constant:0.0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_slider attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:.05 constant:0.0]];
     
@@ -171,7 +170,7 @@
     
     //Lightboxcollection
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_lightbox_collection attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_lightbox_collection attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_lightbox_collection attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:-30.0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_lightbox_collection attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:.65 constant:0.0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_lightbox_collection attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:.5 constant:0.0]];
     
@@ -186,15 +185,24 @@
     
 }
 
+
+-(void)addQeueAdderView:(UIButton*)sender{
+    
+    BlockDetailView *block = [[BlockDetailView alloc] initWithLightBox:current_clicked_cell.lightBox];
+    [self popQeueViewIn:block];
+    
+}
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     LightBoxCell *cell = (LightBoxCell*)[collectionView cellForItemAtIndexPath:indexPath];
-    BlockDetailView *detailView = [[BlockDetailView alloc] initWithLightBox:cell.lightBox];
+    QeueList *qList = [[QeueList alloc] initWithLightBox:cell.lightBox];
+    [qList.select addTarget:self action:@selector(addQeueAdderView:) forControlEvents:UIControlEventTouchUpInside];
+    [self popQeueViewIn:qList];
     
-    [self popDetailViewIn:detailView];
+    current_clicked_cell = cell;
     
 }
 
--(void)popDetailViewIn:(UIView*)detailView{
+-(void)popQeueViewIn:(UIView*)detailView{
     detailView.translatesAutoresizingMaskIntoConstraints = NO;
     
     [self.view addSubview:detailView];
@@ -203,27 +211,33 @@
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:detailView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:detailView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:detailView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:.7 constant:0.0]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:detailView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:.6 constant:0.0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:detailView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:.75 constant:0.0]];
 }
 
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 5;
+    return [sharedDelegate.columns count];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 9;
+    LightColumn *col = [sharedDelegate.columns objectAtIndex:section];
+    return col.lightBoxes.count;
     // return 1 + section; // for stairstep
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)aCollectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    LightColumn *current_column = [sharedDelegate.columns objectAtIndex:indexPath.section];
+    LightBox *currentBox;
+        currentBox = [current_column.lightBoxes objectAtIndex:current_column.lightBoxes.count-indexPath.row-1];
+
+    
     LightBoxCell *cell = (LightBoxCell *)[self.lightbox_collection dequeueReusableCellWithReuseIdentifier:@"lightbox" forIndexPath:indexPath];
     
-    [cell setupCellWithBox:nil];
-    cell.number.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row+1];
+    cell.lightBox = currentBox;
+    cell.number.text = [NSString stringWithFormat:@"%i",cell.lightBox.number+1];
     
     return cell;
 }
